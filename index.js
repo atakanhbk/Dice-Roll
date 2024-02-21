@@ -1,8 +1,12 @@
 const buttonEl = document.getElementById("roll-button");
+const clearBtn = document.getElementById("clear-button");
+
 
 const diceEl = document.getElementById("dice");
 
 const rollHistoryEl = document.getElementById("roll-history");
+
+
 
 let historyList = [];
 
