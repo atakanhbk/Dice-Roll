@@ -1,12 +1,9 @@
 const buttonEl = document.getElementById("roll-button");
 const clearBtn = document.getElementById("clear-button");
 
-
 const diceEl = document.getElementById("dice");
 
 const rollHistoryEl = document.getElementById("roll-history");
-
-
 
 let historyList = [];
 
@@ -55,3 +52,12 @@ buttonEl.addEventListener("click", () => {
     rollDice();
   }, 1000);
 });
+
+const clearList = () => {
+  while (rollHistoryEl.firstChild) {
+    rollHistoryEl.removeChild(rollHistoryEl.firstChild);
+  }
+  historyList = [];
+};
+
+clearBtn.addEventListener("click", clearList);
